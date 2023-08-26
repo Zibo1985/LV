@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('info', function () {
+    return 'lorem ipsum';
+});
+
+
+Route::get('db', function () {
+    return view('test');
+});
+Route::get('/tasks', 'App\Http\Controllers\TodoController@indexView');
+
